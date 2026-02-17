@@ -32,8 +32,7 @@ public class ProductRepository {
         return null;
     }
     public Product update(Product product){
-        for (int i=0; i<productData.size(); i++){
-            Product p = productData.get(i);
+        for (Product p: productData){
             if(p.getProductId().equals(product.getProductId())){
                 p.setProductName(product.getProductName());
                 p.setProductQuantity(product.getProductQuantity());

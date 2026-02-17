@@ -3,6 +3,7 @@ plugins {
     jacoco
     id("org.springframework.boot") version "3.5.10"
     id("io.spring.dependency-management") version "1.1.7"
+    pmd
 }
 
 group = "id.ac.ui.cs.advprog"
@@ -67,4 +68,11 @@ tasks.jacocoTestReport{
 }
 tasks.withType<Test>().configureEach {
     useJUnitPlatform()
+}
+
+pmd {
+    isConsoleOutput = true
+    toolVersion = "7.0.0-rc4"
+    ruleSets = listOf("category/java/errorprone.xml", "category/java/bestpractices.xml")
+    isIgnoreFailures=false
 }
