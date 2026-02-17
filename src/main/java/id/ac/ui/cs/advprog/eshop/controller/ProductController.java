@@ -17,15 +17,6 @@ public class ProductController {
 
     @GetMapping("/create")
     public String createProductPage(Model model){
-
-        // mau bikin error pmd
-        try {
-
-        } catch (Exception e) {
-
-        }
-
-
         Product product=new Product();
         model.addAttribute("product", product);
         return "createProduct";
