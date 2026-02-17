@@ -74,4 +74,5 @@ pmd {
     isConsoleOutput = true
     toolVersion = "7.0.0-rc4"
     ruleSets = listOf("category/java/errorprone.xml", "category/java/bestpractices.xml")
+    isIgnoreFailures=false
 }
